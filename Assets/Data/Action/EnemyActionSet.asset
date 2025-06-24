@@ -1,0 +1,1504 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf61962964ea58c2755dd1baf596e, type: 3}
+  m_Name: EnemyActionSet
+  m_EditorClassIdentifier: 
+  actions:
+  - rid: 7165432050261427095
+  - rid: 7165432051261243712
+  - rid: 7165432050261427096
+  - rid: 7165432051261243736
+  - rid: 7165432051672285213
+  - rid: 7165432051672285205
+  references:
+    version: 2
+    RefIds:
+    - rid: 7165432050261427095
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Combo1
+        animationList:
+        - animInfo:
+            name: LeftArc
+            time: 1.3
+            effects:
+            - rid: 7165432050261427098
+            - rid: 7165432051261243835
+            - rid: 7165432051261243836
+          events:
+          - rid: 7165432050261427099
+          - rid: 7165432050261427100
+          - rid: 7165432050261427101
+        - animInfo:
+            name: RightArc
+            time: 0.8
+            effects:
+            - rid: 7165432050261427104
+            - rid: 7165432051261244101
+          events:
+          - rid: 7165432050261427105
+          - rid: 7165432050261427106
+          - rid: 7165432050261427107
+        - animInfo:
+            name: Thrust
+            time: 1.5
+            effects:
+            - rid: 7165432050261427110
+            - rid: 7165432051261244102
+          events:
+          - rid: 7165432050261427111
+          - rid: 7165432050261427112
+          - rid: 7165432050261427113
+        - animInfo:
+            name: Cross
+            time: 1.6
+            effects:
+            - rid: 7165432050261427116
+            - rid: 7165432051261244103
+          events:
+          - rid: 7165432050261427117
+          - rid: 7165432050261427118
+          - rid: 7165432050261427119
+          - rid: 7165432050261427120
+        - animInfo:
+            name: Spin
+            time: 1.5
+            effects:
+            - rid: 7165432050261427123
+            - rid: 7165432051261244104
+          events:
+          - rid: 7165432050261427124
+          - rid: 7165432050261427125
+          - rid: 7165432050261427126
+    - rid: 7165432050261427096
+      type: {class: HitAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Hit
+        knockbackDuration: 0.3
+        knockbackCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 4
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.15
+            value: 0.9
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: -2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: -4
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 7165432050261427098
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 0
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.3
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -60
+          swingEndAngle: 60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432050261427099
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432050261427100
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.2
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432050261427101
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.2
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432050261427104
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 0
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.3
+          activeDuration: 0.3
+          postDuration: 0.2
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: 60
+          swingEndAngle: -60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432050261427105
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432050261427106
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.3
+        length: 0.2
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432050261427107
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.6
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432050261427110
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 1
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.5
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: 60
+          swingEndAngle: -60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 2
+          crossHeight: 0.5
+    - rid: 7165432050261427111
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.1
+        length: 0.4
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 20
+    - rid: 7165432050261427112
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.25
+        length: 0.3
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 6
+          cameraShakeLevel: 3
+    - rid: 7165432050261427113
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.4
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432050261427116
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 3
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.6
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 1.1577485
+              outSlope: 1.1577485
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0.33333334
+            - serializedVersion: 3
+              time: 0.23476037
+              value: 0.27179345
+              inSlope: 0.47860584
+              outSlope: 0.47860584
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.48196167
+            - serializedVersion: 3
+              time: 0.6208345
+              value: 0.82413745
+              inSlope: 1.0934308
+              outSlope: 1.0934308
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.23076676
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0.4638148
+              outSlope: 0.4638148
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -90
+          swingEndAngle: 90
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432050261427117
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0
+        actionPhaseFlag: 0
+    - rid: 7165432050261427118
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.3
+        length: 0.5
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432050261427119
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432050261427120
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 2
+          cameraShakeLevel: 1
+    - rid: 7165432050261427123
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 4
+          swingHeight: 1.5
+          swingRadius: 1.6
+          preDuration: 0.5
+          activeDuration: 0.5
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 2
+              outSlope: 2
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.42869264
+              value: 0.8314695
+              inSlope: 2.213316
+              outSlope: 2.213316
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.08105507
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -90
+          swingEndAngle: 290
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432050261427124
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.3
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432050261427125
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.2
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432050261427126
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.5
+        damageConfig:
+          damageFactor: 1.5
+          freezeFrame: 6
+          hitReactionLevel: 3
+          knockBackDistance: 5
+          cameraShakeLevel: 3
+    - rid: 7165432051261243712
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Combo2
+        animationList:
+        - animInfo:
+            name: LeftArc
+            time: 1.3
+            effects:
+            - rid: 7165432051261243725
+            - rid: 7165432051261244105
+          events:
+          - rid: 7165432051261243726
+          - rid: 7165432051261243727
+          - rid: 7165432051261244342
+        - animInfo:
+            name: RightArc
+            time: 1.3
+            effects:
+            - rid: 7165432051261243729
+            - rid: 7165432051261244106
+          events:
+          - rid: 7165432051261243730
+          - rid: 7165432051261243731
+          - rid: 7165432051261243732
+        - animInfo:
+            name: Overhead
+            time: 1.3
+            effects:
+            - rid: 7165432051261243734
+            - rid: 7165432051261244107
+          events:
+          - rid: 7165432051261243735
+          - rid: 7165432051261244343
+          - rid: 7165432051672285478
+    - rid: 7165432051261243725
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 0
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.3
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -60
+          swingEndAngle: 60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432051261243726
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432051261243727
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.2
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432051261243729
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 0
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.3
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: 60
+          swingEndAngle: -60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432051261243730
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432051261243731
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.2
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432051261243732
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.2
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432051261243734
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 2
+          swingHeight: 1.5
+          swingRadius: 1.5
+          preDuration: 0.5
+          activeDuration: 0.3
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -60
+          swingEndAngle: 60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432051261243735
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.3
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 2
+          knockBackDistance: 3.5
+          cameraShakeLevel: 2
+    - rid: 7165432051261243736
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Thrust
+        animationList:
+        - animInfo:
+            name: Thrust
+            time: 1.5
+            effects:
+            - rid: 7165432051261243741
+            - rid: 7165432051261244344
+            - rid: 7165432051261244345
+          events:
+          - rid: 7165432052564361589
+          - rid: 7165432051261243743
+          - rid: 7165432051261243744
+    - rid: 7165432051261243741
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 1
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.5
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.5
+              value: 1
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 1
+              value: 0.25
+              inSlope: 0
+              outSlope: 0
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: 60
+          swingEndAngle: -60
+          thrustStartDistance: 0.5
+          thrustEndDistance: 2
+          crossHeight: 0.5
+    - rid: 7165432051261243743
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.1
+        length: 0.6
+        damageConfig:
+          damageFactor: 1
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 6
+          cameraShakeLevel: 3
+    - rid: 7165432051261243744
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.4
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432051261243835
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.3
+    - rid: 7165432051261243836
+      type: {class: ShakeAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        shakeDuration: 0.3
+        shakeHeight: 0.2
+        bodyTransformName: Root
+    - rid: 7165432051261244101
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 0.8
+    - rid: 7165432051261244102
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.5
+    - rid: 7165432051261244103
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.6
+    - rid: 7165432051261244104
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.5
+    - rid: 7165432051261244105
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.3
+    - rid: 7165432051261244106
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.3
+    - rid: 7165432051261244107
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.3
+    - rid: 7165432051261244342
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.2
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432051261244343
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 1.2
+        length: 0
+        actionPhaseFlag: 2
+    - rid: 7165432051261244344
+      type: {class: ShakeAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        shakeDuration: 0.5
+        shakeHeight: 0.2
+        bodyTransformName: Root
+    - rid: 7165432051261244345
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.5
+    - rid: 7165432051672285205
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Cross2
+        animationList:
+        - animInfo:
+            name: Cross
+            time: 1.6
+            effects:
+            - rid: 7165432051672285206
+            - rid: 7165432051672285207
+          events:
+          - rid: 7165432051672285208
+          - rid: 7165432051672285209
+          - rid: 7165432051672285210
+          - rid: 7165432051672285211
+    - rid: 7165432051672285206
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 3
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.6
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 1.1577485
+              outSlope: 1.1577485
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0.33333334
+            - serializedVersion: 3
+              time: 0.23476037
+              value: 0.27179345
+              inSlope: 0.47860584
+              outSlope: 0.47860584
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.48196167
+            - serializedVersion: 3
+              time: 0.6208345
+              value: 0.82413745
+              inSlope: 1.0934308
+              outSlope: 1.0934308
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.23076676
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0.4638148
+              outSlope: 0.4638148
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -90
+          swingEndAngle: 90
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 1
+    - rid: 7165432051672285207
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.6
+    - rid: 7165432051672285208
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0
+        actionPhaseFlag: 0
+    - rid: 7165432051672285209
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.3
+        length: 0.5
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432051672285210
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432051672285211
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 2
+          cameraShakeLevel: 1
+    - rid: 7165432051672285213
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Cross1
+        animationList:
+        - animInfo:
+            name: Cross
+            time: 1.6
+            effects:
+            - rid: 7165432051672285214
+            - rid: 7165432051672285215
+          events:
+          - rid: 7165432051672285216
+          - rid: 7165432051672285217
+          - rid: 7165432051672285218
+          - rid: 7165432051672285219
+    - rid: 7165432051672285214
+      type: {class: WeaponSwingAnimation, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        weaponTransformName: WeaponSocket
+        config:
+          swingType: 3
+          swingHeight: 1
+          swingRadius: 0.5
+          preDuration: 0.5
+          activeDuration: 0.6
+          postDuration: 0.5
+          swingCurve:
+            serializedVersion: 2
+            m_Curve:
+            - serializedVersion: 3
+              time: 0
+              value: 0
+              inSlope: 1.1577485
+              outSlope: 1.1577485
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0.33333334
+            - serializedVersion: 3
+              time: 0.23476037
+              value: 0.27179345
+              inSlope: 0.47860584
+              outSlope: 0.47860584
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.48196167
+            - serializedVersion: 3
+              time: 0.6208345
+              value: 0.82413745
+              inSlope: 1.0934308
+              outSlope: 1.0934308
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0.23076676
+            - serializedVersion: 3
+              time: 1
+              value: 1
+              inSlope: 0.4638148
+              outSlope: 0.4638148
+              tangentMode: 34
+              weightedMode: 0
+              inWeight: 0.33333334
+              outWeight: 0
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          swingStartAngle: -90
+          swingEndAngle: 90
+          thrustStartDistance: 0.5
+          thrustEndDistance: 1.5
+          crossHeight: 0.5
+    - rid: 7165432051672285215
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1.6
+    - rid: 7165432051672285216
+      type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0
+        actionPhaseFlag: 0
+    - rid: 7165432051672285217
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.3
+        length: 0.5
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 5
+    - rid: 7165432051672285218
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.5
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 1.5
+          cameraShakeLevel: 1
+    - rid: 7165432051672285219
+      type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0.3
+        damageConfig:
+          damageFactor: 0.6
+          freezeFrame: 3
+          hitReactionLevel: 1
+          knockBackDistance: 2
+          cameraShakeLevel: 1
+    - rid: 7165432051672285478
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.2
+        length: 0.3
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 8
+    - rid: 7165432052564361589
+      type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.1
+        length: 0.7
+        motionCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0.25
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        maxSpeed: 15

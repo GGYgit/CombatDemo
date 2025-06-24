@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d262e36b58894cffa90eaecba1375464, type: 3}
+  m_Name: Enemy Attribute Set
+  m_EditorClassIdentifier: 
+  attributes:
+  - attribute: {fileID: 11400000, guid: 9f7c6994aff606b43be2ae0aeff2b8c3, type: 2}
+    defaultValue: 15
+  - attribute: {fileID: 11400000, guid: 3f2fa330323af9a46bc9cc57f245e21d, type: 2}
+    defaultValue: 300
+  - attribute: {fileID: 11400000, guid: df3e7a5ab9d3979438a37a9c582c9df1, type: 2}
+    defaultValue: 300

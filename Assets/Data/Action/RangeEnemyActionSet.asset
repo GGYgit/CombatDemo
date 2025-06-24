@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951cf61962964ea58c2755dd1baf596e, type: 3}
+  m_Name: RangeEnemyActionSet
+  m_EditorClassIdentifier: 
+  actions:
+  - rid: 7165432031577637618
+  - rid: 7165432051672285564
+  references:
+    version: 2
+    RefIds:
+    - rid: 7165432031577637618
+      type: {class: ComboAttackAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Shoot
+        animationList:
+        - animInfo:
+            name: Shoot
+            time: 1
+            effects:
+            - rid: 7165432051672285565
+            - rid: 7165432051672285566
+            - rid: 7165432051672285567
+          events:
+          - rid: 7165432051672285568
+    - rid: 7165432051672285564
+      type: {class: HitAction, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        actionTag: Hit
+        knockbackDuration: 0.3
+        knockbackCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 4
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.15
+            value: 0.9
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: -2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: -4
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 7165432051672285565
+      type: {class: ShakeAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        shakeDuration: 0.5
+        shakeHeight: 0.2
+        bodyTransformName: Root
+    - rid: 7165432051672285566
+      type: {class: ScalePulseAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        transformName: Head
+        duration: 0.5
+        scale: {x: 1.1, y: 1.1, z: 1.1}
+    - rid: 7165432051672285567
+      type: {class: ColorAnimEffect, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        color: {r: 1, g: 0, b: 0, a: 1}
+        headName: Head
+        duration: 1
+    - rid: 7165432051672285568
+      type: {class: ShootActionEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
+      data:
+        startTime: 0.8
+        length: 0
+        projectile: {fileID: 6182268155565077271, guid: e0009d0d80d048046a625f1af9f2c57b, type: 3}
+        speedFactor: 1
