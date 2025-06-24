@@ -14,7 +14,6 @@ namespace Framework.Combat.Runtime{
 		protected float destroyTimeOnDeath = 3f;
 		protected BaseController controller;
 		protected float timeScale = 1;
-
 		private CombatTeamType combatTeamType;
 		private List<CharacterComponent> charComponents;
 		private bool isDead;

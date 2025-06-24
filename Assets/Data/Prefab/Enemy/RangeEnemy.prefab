@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillHealthOnStart: 1
   destroyTimeOnDeath: 2.1
+  enemyType: 1
 --- !u!114 &2524756645782722209
 MonoBehaviour:
   m_ObjectHideFlags: 0

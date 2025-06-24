@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Framework.Combat.Runtime{
 	/// <summary>
-	/// 冲刺到目标处动作，目前仅用于跳跃下冲
+	/// 冲刺到目标处动作，优先锁定远程敌人，目前仅用于玩家跳跃下冲
 	/// </summary>
 	public class DashToTargetAction : BaseAction{
 		public AnimationConfig dashAnimation;
@@ -33,10 +34,21 @@ namespace Framework.Combat.Runtime{
 
 		protected override void OnActivated(object userdata = null){
 			var targetComp = OwnerChar.GetCharComponent<TargetManagerComponent>();
+			targetChar = null;
 			if (targetComp){
 				targetChar = targetComp.GetCurrentTarget();
 				if (targetChar == null){
-					targetChar = targetComp.GetNearestTarget(range);
+					List<BaseCharacter> possibleTargets = OwnerChar.GetPossibleTargets(range, 0.5f, 20f, true);
+					foreach (var possibleTarget in possibleTargets){
+						if (possibleTarget is EnemyCharacter enemyCharacter &&
+						    enemyCharacter.enemyType == EnemyType.Ranged){
+							targetChar = possibleTarget;
+							break;
+						}
+					}
+					if (targetChar == null && possibleTargets.Count > 0){
+						targetChar = possibleTargets[0];
+					}
 				}
 			}
 			if (targetChar == null){

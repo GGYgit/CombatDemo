@@ -27,7 +27,7 @@ MonoBehaviour:
         animationList:
         - animInfo:
             name: LeftArc
-            time: 0.8
+            time: 0.70000005
             effects:
             - rid: 7165432031577637669
           events:
@@ -39,7 +39,7 @@ MonoBehaviour:
           - rid: 7165432051261243623
         - animInfo:
             name: RightArc
-            time: 0.8
+            time: 0.75
             effects:
             - rid: 7165432031577637670
           events:
@@ -91,7 +91,7 @@ MonoBehaviour:
       type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
         startTime: 0
-        length: 0.3
+        length: 0.2
         motionCurve:
           serializedVersion: 2
           m_Curve:
@@ -134,7 +134,7 @@ MonoBehaviour:
           swingType: 0
           swingHeight: 1
           swingRadius: 0.5
-          preDuration: 0.3
+          preDuration: 0.2
           activeDuration: 0.3
           postDuration: 0.2
           swingCurve:
@@ -183,7 +183,7 @@ MonoBehaviour:
           swingType: 0
           swingHeight: 1
           swingRadius: 0.5
-          preDuration: 0.3
+          preDuration: 0.25
           activeDuration: 0.3
           postDuration: 0.2
           swingCurve:
@@ -276,7 +276,7 @@ MonoBehaviour:
     - rid: 7165432031577637739
       type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.3
+        startTime: 0.2
         length: 0.2
         damageConfig:
           damageFactor: 1
@@ -288,7 +288,7 @@ MonoBehaviour:
       type: {class: SlideForwardEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
         startTime: 0
-        length: 0.3
+        length: 0.25
         motionCurve:
           serializedVersion: 2
           m_Curve:
@@ -326,7 +326,7 @@ MonoBehaviour:
     - rid: 7165432031577637742
       type: {class: WeaponDamageEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.3
+        startTime: 0.25
         length: 0.2
         damageConfig:
           damageFactor: 1
@@ -767,12 +767,12 @@ MonoBehaviour:
     - rid: 7165432050261426785
       type: {class: CameraSoftLookAtEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.3
+        startTime: 0.2
         length: 0.3
     - rid: 7165432050261426786
       type: {class: CameraSoftLookAtEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.3
+        startTime: 0.25
         length: 0.3
     - rid: 7165432050261426787
       type: {class: CameraSoftLookAtEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
@@ -792,13 +792,13 @@ MonoBehaviour:
     - rid: 7165432050261427090
       type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.6
+        startTime: 0.5
         length: 0
         actionPhaseFlag: 2
     - rid: 7165432050261427091
       type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.6
+        startTime: 0.55
         length: 0
         actionPhaseFlag: 2
     - rid: 7165432050261427092
@@ -822,13 +822,13 @@ MonoBehaviour:
     - rid: 7165432051261243623
       type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.7
+        startTime: 0.6
         length: 0
         actionPhaseFlag: 4
     - rid: 7165432051261243624
       type: {class: ActionFlagEvent, ns: Framework.Combat.Runtime, asm: Assembly-CSharp}
       data:
-        startTime: 0.7
+        startTime: 0.65
         length: 0
         actionPhaseFlag: 4
     - rid: 7165432051261243625

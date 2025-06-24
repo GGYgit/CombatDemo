@@ -10,13 +10,17 @@ namespace Framework.Combat.Runtime{
 	public enum AIState{
 		Patrol = 0,
 		Combat = 1,
-		ReturnHome = 2,
-		Wait = 3,
+		Wait = 2,
 	}
 
 	public enum MovementStateType{
 		Jog,
 		Sprint,
+	}
+
+	public enum EnemyType{
+		Melee = 0,
+		Ranged,
 	}
 
 	/// <summary>
@@ -100,11 +104,9 @@ namespace Framework.Combat.Runtime{
 	}
 
 
-
 	[Serializable]
 	public class ActionChances{
 		[LabelText("动作列表")]
 		public List<EnemyAttackActionData> enemyAttackActionData;
 	}
-
 }

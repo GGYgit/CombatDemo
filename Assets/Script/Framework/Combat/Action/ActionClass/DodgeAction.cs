@@ -23,8 +23,8 @@ namespace Framework.Combat.Runtime{
 			time = 0f;
 			Vector2 inputDir = OwnerChar.MovementComp.GetMoveInput();
 			if (inputDir == Vector2.zero){
-				dodgeDirection = defaultDodgeDirection.GetCameraRelativeDirection();
-			} else dodgeDirection = inputDir.GetCameraRelativeDirection();
+				dodgeDirection = defaultDodgeDirection.normalized.GetCameraRelativeDirection();
+			} else dodgeDirection = inputDir.normalized.GetCameraRelativeDirection();
 			OwnerChar.StatusComp.AddStatus(CharacterStatusType.Invincible, invincibleDuration);
 			ExecuteAction(animationConfig);
 		}

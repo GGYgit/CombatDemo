@@ -6,6 +6,8 @@ namespace Framework.Combat.Runtime{
 	/// 玩家控制器
 	/// </summary>
 	public sealed class PlayerController : BaseController{
+		public float gamepadSensitivity = 5f;
+
 		private PlayerCharacter playerCharacter;
 		private PlayerInputAction playerInputAction;
 		private PlayerInputAction.GamePlayActions gamePlayActionSet;
@@ -64,6 +66,9 @@ namespace Framework.Combat.Runtime{
 
 		private void CameraInputUpdate(InputAction.CallbackContext context){
 			rotateCameraInput = context.ReadValue<Vector2>();
+			if (rotateCameraInput != Vector2.zero && context.control.device is Gamepad){
+				rotateCameraInput *= gamepadSensitivity;
+			}
 		}
 
 		private void CameraRotate(){

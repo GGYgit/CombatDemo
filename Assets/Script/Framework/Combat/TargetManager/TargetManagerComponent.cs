@@ -47,6 +47,13 @@ namespace Framework.Combat.Runtime{
 			return GetCurrentTarget();
 		}
 
+		/// <summary>
+		/// 获取最远的目标
+		/// </summary>
+		public virtual BaseCharacter GetFarthestTarget(float maxRange){
+			return GetCurrentTarget();
+		}
+
 		public BaseCharacter GetCurrentTarget(){
 			return currentTarget;
 		}

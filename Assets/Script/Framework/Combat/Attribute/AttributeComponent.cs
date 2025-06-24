@@ -12,7 +12,6 @@ namespace Framework.Combat.Runtime{
 		private List<AttributesSetModifier> activeModifiers; //激活的属性集修改器
 		[ShowInInspector]
 		private Dictionary<string, AttributeValue> attributeValueDic;
-		private bool attributeDictStale = true;
 
 		protected override void OnInit(BaseCharacter character){
 			base.OnInit(character);

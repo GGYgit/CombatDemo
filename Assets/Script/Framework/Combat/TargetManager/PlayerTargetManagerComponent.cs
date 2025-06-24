@@ -9,8 +9,8 @@ namespace Framework.Combat.Runtime{
 		/// <summary>
 		/// 玩家目标将返回基于屏幕中心优先的角色
 		/// </summary>
-		public override BaseCharacter GetNearestTarget(float range){
-			var targets = owner.GetPossibleTargets(range);
+		public override BaseCharacter GetNearestTarget(float maxRange){
+			var targets = owner.GetPossibleTargets(maxRange);
 			if (targets.Count > 0) return targets[0];
 			return null;
 		}

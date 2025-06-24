@@ -14,6 +14,7 @@ namespace Framework.Combat.Runtime{
 			gameObject.layer = LayerManager.HitBoxIndex;
 			hitBoxCollider = GetComponent<Collider>();
 			hitBoxCollider.isTrigger = true;
+			hitBoxCollider.enabled = false;
 		}
 
 		public void Active(DamageComponent damageComponent){

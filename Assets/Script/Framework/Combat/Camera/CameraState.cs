@@ -32,37 +32,20 @@ namespace Framework.Combat.Runtime{
 		public List<LookPoint> lookPoints;
 		public CameraMode cameraMode;
 
+		[SerializeField]
+		public float xDefaultSensitivity;
+		[SerializeField]
+		public float defaultDistance;
+		[SerializeField]
+		public float yDefaultSensitivity;
 
 #region UserSetting
-		public float Distance => defaultDistance + userDistance;
-		[SerializeField, FormerlySerializedAs("defaultDistance")]
-		public float defaultDistance;
-		[NonSerialized] internal float userDistance = 10f;
+		public float Distance => defaultDistance;
 
 
-		public float XSensitivity => xDefaultSensitivity + userSensitivity;
-		[SerializeField, FormerlySerializedAs("xMouseSensitivity")]
-		public float xDefaultSensitivity;
-		public float YSensitivity => yDefaultSensitivity + userSensitivity;
-		[SerializeField, FormerlySerializedAs("yMouseSensitivity")]
-		public float yDefaultSensitivity;
-		[NonSerialized] internal float userSensitivity = 0.5f;
+		public float XSensitivity => xDefaultSensitivity;
 
-		/// <summary>
-		/// 玩家设置摄像机距离
-		/// </summary>
-		/// <param name="uDistance"></param>
-		public void SetUserDistance(float uDistance){
-			this.userDistance = uDistance;
-		}
-
-		/// <summary>
-		/// 玩家设置摄像机灵敏度
-		/// </summary>
-		/// <param name="sensitivity"></param>
-		public void SetUserSensitivity(float sensitivity){
-			this.userSensitivity = sensitivity;
-		}
+		public float YSensitivity => yDefaultSensitivity;
 #endregion
 
 		public CameraState(string name){

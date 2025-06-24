@@ -15,7 +15,7 @@ namespace Framework.Combat.Runtime{
 		[Header("Debug")]
 		[ShowInInspector]
 		private string performingActionTag;
-		[ShowInInspector,InlineProperty]
+		[ShowInInspector, InlineProperty]
 		private BaseAction performingAction;
 		private ActionSet actionSetInst;
 
@@ -33,7 +33,8 @@ namespace Framework.Combat.Runtime{
 		public void ReceiveInput(string actionTag, ActionPriority actionPriority, object userdata = null){
 			if (IsLocked) return;
 			OnReceiveInput.Invoke(actionTag);
-			if (performingAction != null && (int)actionPriority <= currentPriority){ //输入小于等于正在执行动作的优先级，输入交由动作类处理，是否派生或连击什么的。
+			if (performingAction != null && (int) actionPriority <= currentPriority){
+				//输入小于等于正在执行动作的优先级，输入交由动作类处理，是否派生或连击什么的。
 				performingAction.ReceiveInput(actionTag, actionPriority, userdata);
 			} else{
 				TriggerAction(actionTag, actionPriority, userdata);
@@ -76,12 +77,6 @@ namespace Framework.Combat.Runtime{
 			return false;
 		}
 
-		private void Update(){
-			if (IsLocked) return;
-			if (performingAction != null){
-				performingAction.Tick(owner.DeltaTime);
-			}
-		}
 
 		protected void LaunchAction(string actionTag, ActionPriority actionPriority, object userdata = null){
 			if (GetActionByTag(actionTag, out BaseAction action)){
@@ -116,6 +111,13 @@ namespace Framework.Combat.Runtime{
 				return true;
 			}
 			return false;
+		}
+
+		private void Update(){
+			if (IsLocked) return;
+			if (performingAction != null){
+				performingAction.Tick(owner.DeltaTime);
+			}
 		}
 	}
 }

@@ -32,9 +32,6 @@ namespace Framework.Combat.Runtime{
 			if (to.fov <= 0) to.fov = 1f;
 			to.xDefaultSensitivity = Mathf.Lerp(to.xDefaultSensitivity, from.xDefaultSensitivity, time);
 			to.yDefaultSensitivity = Mathf.Lerp(to.yDefaultSensitivity, from.yDefaultSensitivity, time);
-			to.userDistance = from.userDistance;
-			to.userSensitivity = from.userSensitivity;
-
 		}
 
 		/// <summary>
@@ -67,8 +64,6 @@ namespace Framework.Combat.Runtime{
 			if (to.fov <= 0) to.fov = 1f;
 			to.xDefaultSensitivity = from.xDefaultSensitivity;
             to.yDefaultSensitivity = from.yDefaultSensitivity;
-			to.userDistance = from.userDistance;
-			to.userSensitivity = from.userSensitivity;
 		}
 
 		public static ClipPlanePoints NearClipPlanePoints(this Camera camera, Vector3 pos, float clipPlaneMargin){
